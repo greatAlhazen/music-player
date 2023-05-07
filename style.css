@@ -24,3 +24,51 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+
+.music-container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35rem;
+  min-height: 45rem;
+  background-color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 7px;
+}
+
+.music-container__image {
+  width: 25rem;
+  height: 25rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: -25%;
+  border-radius: 50%;
+  border: 3px solid #36454f;
+  object-fit: cover;
+}
+
+.music-container__detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.music-container__title {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
+.music-container__artist {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: -1rem;
+}
+
+audio {
+  display: none;
+  visibility: none;
+}
