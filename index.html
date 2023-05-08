@@ -8,6 +8,13 @@
       href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <title>Music Player</title>
@@ -20,6 +27,30 @@
         <h3 class="music-container__artist" id="artist">Nesterouk</h3>
       </div>
       <audio src="musics/music-1.mp3" id="audio" controls></audio>
+
+      <div class="progress-bar" id="progress" style="--width: 0"></div>
+      <div class="times-container">
+        <div class="times-container__current" id="current">0:00</div>
+        <div class="times-container__duration" id="duration">2:27</div>
+      </div>
+
+      <div class="buttons-container">
+        <i
+          class="fa-solid fa-backward buttons-container__button"
+          title="previous"
+          id="prev"
+        ></i>
+        <i
+          class="fa-solid fa-play buttons-container__button"
+          title="play"
+          id="play"
+        ></i>
+        <i
+          class="fa-solid fa-forward buttons-container__button"
+          title="next"
+          id="next"
+        ></i>
+      </div>
     </div>
   </body>
 </html>
