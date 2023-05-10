@@ -8,6 +8,7 @@ const image = document.getElementById("image");
 const currentTimeElement = document.getElementById("current");
 const durationElement = document.getElementById("duration");
 let isPLaying;
+let currentSong = 2;
 
 const musics = [
   {
@@ -55,4 +56,51 @@ const loadMusic = (music) => {
   durationElement.textContent = "2:02";
 };
 
-loadMusic(musics[2]);
+loadMusic(musics[currentSong]);
+
+function nextDisbale(value) {
+  if (value === "disable") {
+    next.style.opacity = "0.5";
+    next.style.pointerEvents = "none";
+  } else {
+    next.style.opacity = "1";
+    next.style.pointerEvents = "auto";
+  }
+}
+
+function prevDisbale(value) {
+  if (value === "disable") {
+    prev.style.opacity = "0.5";
+    prev.style.pointerEvents = "none";
+  } else {
+    prev.style.opacity = "1";
+    prev.style.pointerEvents = "auto";
+  }
+}
+
+function nextMusic() {
+  if (currentSong === 2) {
+    nextDisbale("disable");
+  } else {
+    prevDisbale("notDisable");
+    nextDisbale("notDisable");
+  }
+  currentSong += 1;
+  loadMusic(musics[currentSong]);
+  songPlay();
+}
+
+function prevMusic() {
+  if (currentSong === 1) {
+    prevDisbale("disable");
+  } else {
+    nextDisbale("notDisable");
+    prevDisbale("notDisable");
+  }
+  currentSong -= 1;
+  loadMusic(musics[currentSong]);
+  songPlay();
+}
+
+next.addEventListener("click", nextMusic);
+prev.addEventListener("click", prevMusic);
