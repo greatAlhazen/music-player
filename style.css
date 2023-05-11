@@ -80,6 +80,7 @@ audio {
   background-color: #fff;
   margin-top: 3rem;
   position: relative;
+  cursor: pointer;
 }
 
 .progress-bar::after {
